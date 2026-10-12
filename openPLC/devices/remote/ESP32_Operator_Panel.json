@@ -1,0 +1,76 @@
+{
+  "name": "ESP32_Operator_Panel",
+  "protocol": "modbus-tcp",
+  "modbusTcpConfig": {
+    "host": "10.0.0.253",
+    "port": 502,
+    "timeout": 1000,
+    "slaveId": 1,
+    "ioGroups": [
+      {
+        "id": "ab646837-af0a-4e34-8e0f-8d417ece0604",
+        "name": "Momentary_Buttons_OP",
+        "functionCode": "2",
+        "cycleTime": 100,
+        "offset": "0",
+        "length": 4,
+        "errorHandling": "set-to-zero",
+        "ioPoints": [
+          {
+            "id": "Momentary_Buttons_OP_0",
+            "name": "Momentary_Buttons_OP_0",
+            "type": "Digital Input (Discrete Input)",
+            "iecLocation": "%IX0.1",
+            "alias": "Start_Button_OP"
+          },
+          {
+            "id": "Momentary_Buttons_OP_1",
+            "name": "Momentary_Buttons_OP_1",
+            "type": "Digital Input (Discrete Input)",
+            "iecLocation": "%IX0.2",
+            "alias": "Stop_Button_OP"
+          },
+          {
+            "id": "Momentary_Buttons_OP_2",
+            "name": "Momentary_Buttons_OP_2",
+            "type": "Digital Input (Discrete Input)",
+            "iecLocation": "%IX0.3",
+            "alias": "Restart_Button_OP"
+          },
+          {
+            "id": "Momentary_Buttons_OP_3",
+            "name": "Momentary_Buttons_OP_3",
+            "type": "Digital Input (Discrete Input)",
+            "iecLocation": "%IX0.4",
+            "alias": "Jog_Button_OP"
+          }
+        ]
+      },
+      {
+        "id": "31c4484e-e45d-4f00-a463-69f58aea09fe",
+        "name": "Right_Panel_Buttons_OP",
+        "functionCode": "4",
+        "cycleTime": 100,
+        "offset": "0",
+        "length": 2,
+        "errorHandling": "keep-last-value",
+        "ioPoints": [
+          {
+            "id": "Right_Panel_Buttons_OP_0",
+            "name": "Right_Panel_Buttons_OP_0",
+            "type": "Analog Input (Input Register)",
+            "iecLocation": "%IW0",
+            "alias": "Mode_Selector_OP"
+          },
+          {
+            "id": "Right_Panel_Buttons_OP_1",
+            "name": "Right_Panel_Buttons_OP_1",
+            "type": "Analog Input (Input Register)",
+            "iecLocation": "%IW1",
+            "alias": "Speed_Setpoint_OP"
+          }
+        ]
+      }
+    ]
+  }
+}

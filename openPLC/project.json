@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "name": "Conveyor Practice Module",
+    "type": "plc-project"
+  },
+  "data": {
+    "dataTypes": [],
+    "globalVariableLists": [],
+    "pous": [],
+    "configuration": {
+      "resource": {
+        "tasks": [
+          {
+            "name": "task0",
+            "triggering": "Cyclic",
+            "interval": "T#20ms",
+            "priority": 1
+          }
+        ],
+        "instances": [
+          {
+            "name": "instance0",
+            "task": "task0",
+            "program": "main"
+          }
+        ],
+        "globalVariables": []
+      }
+    },
+    "libraries": [],
+    "debugVariables": {
+      "pous": {
+        "main": [
+          "Start_Button",
+          "Stop_Button",
+          "Restart_Button",
+          "Jog_Button",
+          "Mode_Selector",
+          "Speed_Setpoint",
+          "ESP32_Active",
+          "Conveyor_Run_Command",
+          "Conveyor_Speed_Command",
+          "Is_Manual_Mode",
+          "Is_Auto_Mode",
+          "Is_Jog_Mode",
+          "Manual_Run_Request",
+          "Auto_Run_Request",
+          "Jog_Run_Request",
+          "Jog_Request_Latch",
+          "Jog_Request_Timer",
+          "Jog_Request_Reset",
+          "Jog_Button_One_Shot",
+          "Auto_Run_State",
+          "Auto_Run_State_Latch",
+          "Auto_Run_State_Reset",
+          "Auto_Run_State_Timer",
+          "Auto_Run_State_Pause_Latch",
+          "Auto_Run_State_Pause_Timer",
+          "Auto_Start_One_Shot"
+        ]
+      }
+    }
+  }
+}

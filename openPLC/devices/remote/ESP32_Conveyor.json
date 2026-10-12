@@ -1,0 +1,66 @@
+{
+  "name": "ESP32_Conveyor",
+  "protocol": "modbus-tcp",
+  "modbusTcpConfig": {
+    "host": "10.0.0.94",
+    "port": 502,
+    "timeout": 1000,
+    "slaveId": 2,
+    "ioGroups": [
+      {
+        "id": "e799bff0-49b7-4cb8-bc93-7a549e33a538",
+        "name": "ESP32_Active",
+        "functionCode": "2",
+        "cycleTime": 100,
+        "offset": "0",
+        "length": 1,
+        "errorHandling": "set-to-zero",
+        "ioPoints": [
+          {
+            "id": "ESP32_Active_0",
+            "name": "ESP32_Active_0",
+            "type": "Digital Input (Discrete Input)",
+            "iecLocation": "%IX0.0",
+            "alias": "ESP32_Active_Conveyor"
+          }
+        ]
+      },
+      {
+        "id": "770bc895-f9fa-4d8c-9cc0-f398b7c20311",
+        "name": "Run_Command",
+        "functionCode": "5",
+        "cycleTime": 100,
+        "offset": "0",
+        "length": 1,
+        "errorHandling": "set-to-zero",
+        "ioPoints": [
+          {
+            "id": "Run_Command_0",
+            "name": "Run_Command_0",
+            "type": "Digital Output (Single Coil)",
+            "iecLocation": "%QX0.0",
+            "alias": "Run_Command_Conveyor"
+          }
+        ]
+      },
+      {
+        "id": "2054b2b9-9a3e-4f5e-8d36-92f188e16f07",
+        "name": "Speed_Command",
+        "functionCode": "6",
+        "cycleTime": 100,
+        "offset": "0",
+        "length": 1,
+        "errorHandling": "set-to-zero",
+        "ioPoints": [
+          {
+            "id": "Speed_Command_0",
+            "name": "Speed_Command_0",
+            "type": "Analog Output (Single Register)",
+            "iecLocation": "%QW0",
+            "alias": "Speed_Command_Conveyor"
+          }
+        ]
+      }
+    ]
+  }
+}
